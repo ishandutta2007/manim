@@ -67,5 +67,7 @@ Since it's a bit tricky to get all the dependencies set up just right, there is
 a Dockerfile provided.
 
 1. [Install Docker](https://www.docker.com/products/overview)
-2. Build docker image. `docker build -t manim .`
-3. Run it! `docker run --rm -v "$PWD/files":/app/files manim example_scenes.py WarpSquare`
+2. Login. `docker login`
+3. Build docker image. `docker build -t manim .`
+4. Run it! `docker run -v "$PWD/files":/app/files manim example_scenes.py WarpSquare`
+5. Copy it! `docker cp ``docker ps -q -l``:/app/example_scenes MEDIA_DIR/.`
