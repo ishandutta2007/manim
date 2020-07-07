@@ -4,7 +4,51 @@ from constants import OUT
 from constants import RIGHT
 from functools import reduce
 
+<<<<<<< HEAD
 # Matrix operations
+=======
+
+def get_norm(vect):
+    return sum([x**2 for x in vect])**0.5
+
+
+# Quaternions
+# TODO, implement quaternion type
+
+
+def quaternion_mult(q1, q2):
+    w1, x1, y1, z1 = q1
+    w2, x2, y2, z2 = q2
+    return np.array([
+        w1 * w2 - x1 * x2 - y1 * y2 - z1 * z2,
+        w1 * x2 + x1 * w2 + y1 * z2 - z1 * y2,
+        w1 * y2 + y1 * w2 + z1 * x2 - x1 * z2,
+        w1 * z2 + z1 * w2 + x1 * y2 - y1 * x2,
+    ])
+
+
+def quaternion_from_angle_axis(angle, axis):
+    return np.append(
+        np.cos(angle / 2),
+        np.sin(angle / 2) * normalize(axis)
+    )
+
+
+def quaternion_conjugate(quaternion):
+    result = np.array(quaternion)
+    result[1:] *= -1
+    return result
+
+
+def rotate_vector(vector, angle, axis=OUT):
+    quat = quaternion_from_angle_axis(angle, axis)
+    quat_inv = quaternion_conjugate(quat)
+    product = reduce(
+        quaternion_mult,
+        [quat, np.append(0, vector), quat_inv]
+    )
+    return product[1:]
+>>>>>>> Small formating
 
 
 def thick_diagonal(dim, thickness=2):
