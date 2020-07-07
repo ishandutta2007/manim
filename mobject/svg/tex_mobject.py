@@ -158,8 +158,14 @@ class TexMobject(SingleStringTexMobject):
         split_list = split_string_list_to_isolate_substring(
             tex_strings, *substrings_to_isolate
         )
+<<<<<<< HEAD
         split_list = map(str.strip, split_list)
         split_list = filter(lambda s: s != '', split_list)
+=======
+        split_list = [item for sublist in split_list for item in sublist]
+        split_list = list(map(str.strip, split_list))
+        split_list = [s for s in split_list if s != '']
+>>>>>>> updated some breaking scenes to python3
         return split_list
 
     def break_up_by_substrings(self):

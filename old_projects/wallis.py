@@ -3486,7 +3486,7 @@ class KeeperAndSailor(DistanceProductScene, PiCreatureScene):
         anims += [
             MoveToTarget(part)
             for pi in self.observers
-            for part in pi, pi.dot, pi.title
+            for part in [pi, pi.dot, pi.title]
         ]
 
         anims += added_anims
@@ -4911,7 +4911,7 @@ class KeeperAndSailorForSineProduct(KeeperAndSailor):
             FadeOut(product_lines),
             *[
                 ReplacementTransform(product[i], one_minus_f_over_k[j])
-                for i, j in (3, 1), (4, 2), (5, 3), (2, 4), (1, 5)
+                for i, j in [(3, 1), (4, 2), (5, 3), (2, 4), (1, 5)]
             ]
         )
         self.wait()

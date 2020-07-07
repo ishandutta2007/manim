@@ -3445,8 +3445,13 @@ class NumberTheoryAtItsBest(TeacherStudentsScene):
 class IntroduceChi(FactorizationPattern):
     CONFIG = {
         "numbers_list" : [
+<<<<<<< HEAD
             range(i, 36, d)
             for i, d in (1, 4), (3, 4), (2, 2)
+=======
+            list(range(i, 36, d))
+            for i, d in [(1, 4), (3, 4), (2, 2)]
+>>>>>>> updated some breaking scenes to python3
         ],
         "colors" : [GREEN, RED, YELLOW]
     }
