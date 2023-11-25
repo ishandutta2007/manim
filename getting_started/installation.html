@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Quick Start" href="quickstart.html" /><link rel="prev" title="Manim’s documentation" href="../index.html" />
 
     <link rel="shortcut icon" href="../_static/icon.png"/><meta name="generator" content="sphinx-3.0.3, furo 2020.10.05.beta9"/>
@@ -9,8 +9,8 @@
       <link rel="stylesheet" href="../_static/copybutton.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/manim-kindergarten/CDN@master/manimgl_assets/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/manim-kindergarten/CDN@master/manimgl_assets/colors.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?b9a5bb4b0a86b6255962c025">
-    <link rel="stylesheet" href="../_static/pygments.css?b9a5bb4b0a86b6255962c025">
+    <link rel="stylesheet" href="../_static/styles/default.css?de7973eb069bd07b64df41d4">
+    <link rel="stylesheet" href="../_static/pygments.css?de7973eb069bd07b64df41d4">
     
 <style>
   :root {
@@ -27,7 +27,7 @@
         <script src="../_static/language_data.js" defer></script>
       
         <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script><script src="../_static/scripts/main.js?b9a5bb4b0a86b6255962c025"></script></head>
+        <script src="../_static/copybutton.js"></script><script src="../_static/scripts/main.js?de7973eb069bd07b64df41d4"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -94,7 +94,6 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">CLI flags and configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_scenes.html">Example Scenes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">CONFIG dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Manim’s structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s new</a></li>
 </ul>
@@ -134,7 +133,7 @@
 <section id="directly">
 <h2>Directly<a class="headerlink" href="#directly" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install manimgl</span>
-pip install manimgl
+pip<span class="w"> </span>install<span class="w"> </span>manimgl
 
 <span class="c1"># Try it out</span>
 manimgl
@@ -143,12 +142,12 @@ manimgl
 <p>If you want to hack on manimlib itself, clone this repository and in
 that directory execute:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install python requirements</span>
-pip install -e .
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 
 <span class="c1"># Try it out</span>
-manimgl example_scenes.py OpeningManimExample
+manimgl<span class="w"> </span>example_scenes.py<span class="w"> </span>OpeningManimExample
 <span class="c1"># or</span>
-manim-render example_scenes.py OpeningManimExample
+manim-render<span class="w"> </span>example_scenes.py<span class="w"> </span>OpeningManimExample
 </pre></div>
 </div>
 <p>If you run the above command and no error message appears,
@@ -163,10 +162,10 @@ FFmpeg</a>, and make sure that its path is in the PATH environment variable.</p>
 <a class="reference external" href="http://tug.org/texlive/">TeXLive-full</a> is recommended.</p></li>
 <li><p>Install the remaining Python packages.</p></li>
 </ol>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/3b1b/manim.git
-<span class="nb">cd</span> manim
-pip install -e .
-manimgl example_scenes.py OpeningManimExample
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/3b1b/manim.git
+<span class="nb">cd</span><span class="w"> </span>manim
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+manimgl<span class="w"> </span>example_scenes.py<span class="w"> </span>OpeningManimExample
 </pre></div>
 </div>
 </section>
@@ -176,11 +175,11 @@ manimgl example_scenes.py OpeningManimExample
 <li><p>Install FFmpeg and LaTeX as above.</p></li>
 <li><p>Create a conda environment using</p></li>
 </ul>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/3b1b/manim.git
-<span class="nb">cd</span> manim
-conda create -n manim <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
-conda activate manim
-pip install -e .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/3b1b/manim.git
+<span class="nb">cd</span><span class="w"> </span>manim
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>manim<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+conda<span class="w"> </span>activate<span class="w"> </span>manim
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </pre></div>
 </div>
 </section>

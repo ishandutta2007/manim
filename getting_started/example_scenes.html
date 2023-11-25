@@ -1,16 +1,16 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="CONFIG dictionary" href="config.html" /><link rel="prev" title="CLI flags and configuration" href="configuration.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Manim’s structure" href="structure.html" /><link rel="prev" title="CLI flags and configuration" href="configuration.html" />
 
     <link rel="shortcut icon" href="../_static/icon.png"/><meta name="generator" content="sphinx-3.0.3, furo 2020.10.05.beta9"/>
         <title>Example Scenes - manim  documentation</title>
       <link rel="stylesheet" href="../_static/copybutton.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/manim-kindergarten/CDN@master/manimgl_assets/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/manim-kindergarten/CDN@master/manimgl_assets/colors.css" />
-    <link rel="stylesheet" href="../_static/styles/default.css?302f679638bcbd9194b8f4ef">
-    <link rel="stylesheet" href="../_static/pygments.css?302f679638bcbd9194b8f4ef">
+    <link rel="stylesheet" href="../_static/styles/default.css?1151c317178584d715c63e30">
+    <link rel="stylesheet" href="../_static/pygments.css?1151c317178584d715c63e30">
     
 <style>
   :root {
@@ -27,7 +27,7 @@
         <script src="../_static/language_data.js" defer></script>
       
         <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script><script src="../_static/scripts/main.js?302f679638bcbd9194b8f4ef"></script></head>
+        <script src="../_static/copybutton.js"></script><script src="../_static/scripts/main.js?1151c317178584d715c63e30"></script></head>
   <body dir="">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -94,7 +94,6 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">CLI flags and configuration</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Example Scenes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">CONFIG dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Manim’s structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s new</a></li>
 </ul>
@@ -140,7 +139,7 @@ the simplest and one by one.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">ShowCreation</span><span class="p">(</span><span class="n">square</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
-        <span class="c1"># This opens an iPython termnial where you can keep writing</span>
+        <span class="c1"># This opens an iPython terminal where you can keep writing</span>
         <span class="c1"># lines as if they were part of this construct method.</span>
         <span class="c1"># In particular, 'square', 'circle' and 'self' will all be</span>
         <span class="c1"># part of the local namespace in that terminal.</span>
@@ -184,7 +183,7 @@ No more explanation here.</p>
 <h2>AnimatingMethods<a class="headerlink" href="#animatingmethods" title="Permalink to this headline">¶</a></h2>
 <div class="manim-example"><video autoplay="" class="manim-video" controls="" id="animatingmethods" loop="" src="https://cdn.jsdelivr.net/gh/manim-kindergarten/CDN@master/manimgl_assets/example_scenes/AnimatingMethods.mp4"></video><h5 class="example-header">AnimatingMethods<a class="headerlink" href="#animatingmethods">¶</a></h5><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AnimatingMethods</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">grid</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\pi"</span><span class="p">)</span><span class="o">.</span><span class="n">get_grid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">OldTex</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\pi"</span><span class="p">)</span><span class="o">.</span><span class="n">get_grid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
 
         <span class="c1"># You can animate the application of mobject methods with the</span>
@@ -244,7 +243,7 @@ No more explanation here.</p>
         <span class="c1"># for full usage, you can see https://github.com/3b1b/manim/pull/680</span>
         <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">"Here is a text"</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="s2">"Consolas"</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
         <span class="n">difference</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span>
-            <span class="sd">"""</span>
+<span class="w">            </span><span class="sd">"""</span>
 <span class="sd">            The most important difference between Text and TexText is that\n</span>
 <span class="sd">            you can change the font more easily, but can't use the LaTeX grammar</span>
 <span class="sd">            """</span><span class="p">,</span>
@@ -302,16 +301,16 @@ No more explanation here.</p>
             <span class="c1"># each of these strings.  For example, the Tex mobject</span>
             <span class="c1"># below will have 5 subjects, corresponding to the</span>
             <span class="c1"># expressions [A^2, +, B^2, =, C^2]</span>
-            <span class="n">Tex</span><span class="p">(</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="s2">"+"</span><span class="p">,</span> <span class="s2">"B^2"</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="s2">"C^2"</span><span class="p">),</span>
+            <span class="n">OldTex</span><span class="p">(</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="s2">"+"</span><span class="p">,</span> <span class="s2">"B^2"</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="s2">"C^2"</span><span class="p">),</span>
             <span class="c1"># Likewise here</span>
-            <span class="n">Tex</span><span class="p">(</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="s2">"C^2"</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">,</span> <span class="s2">"B^2"</span><span class="p">),</span>
+            <span class="n">OldTex</span><span class="p">(</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="s2">"C^2"</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">,</span> <span class="s2">"B^2"</span><span class="p">),</span>
             <span class="c1"># Alternatively, you can pass in the keyword argument</span>
             <span class="c1"># "isolate" with a list of strings that should be out as</span>
             <span class="c1"># their own submobject.  So the line below is equivalent</span>
             <span class="c1"># to the commented out line below it.</span>
-            <span class="n">Tex</span><span class="p">(</span><span class="s2">"A^2 = (C + B)(C - B)"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">]),</span>
-            <span class="c1"># Tex("A^2", "=", "(", "C", "+", "B", ")", "(", "C", "-", "B", ")"),</span>
-            <span class="n">Tex</span><span class="p">(</span><span class="s2">"A = </span><span class="se">\\</span><span class="s2">sqrt{(C + B)(C - B)}"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">])</span>
+            <span class="n">OldTex</span><span class="p">(</span><span class="s2">"A^2 = (C + B)(C - B)"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A^2"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">]),</span>
+            <span class="c1"># OldTex("A^2", "=", "(", "C", "+", "B", ")", "(", "C", "-", "B", ")"),</span>
+            <span class="n">OldTex</span><span class="p">(</span><span class="s2">"A = </span><span class="se">\\</span><span class="s2">sqrt{(C + B)(C - B)}"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">])</span>
         <span class="p">)</span>
         <span class="n">lines</span><span class="o">.</span><span class="n">arrange</span><span class="p">(</span><span class="n">DOWN</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="n">LARGE_BUFF</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
@@ -370,14 +369,14 @@ No more explanation here.</p>
         <span class="c1"># new_line2 and the "\sqrt" from the final line.  By passing in,</span>
         <span class="c1"># transform_mismatches=True, it will transform this "^2" part into</span>
         <span class="c1"># the "\sqrt" part.</span>
-        <span class="n">new_line2</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s2">"A^2 = (C + B)(C - B)"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">])</span>
+        <span class="n">new_line2</span> <span class="o">=</span> <span class="n">OldTex</span><span class="p">(</span><span class="s2">"A^2 = (C + B)(C - B)"</span><span class="p">,</span> <span class="n">isolate</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="o">*</span><span class="n">to_isolate</span><span class="p">])</span>
         <span class="n">new_line2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
         <span class="n">new_line2</span><span class="o">.</span><span class="n">match_style</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span>
             <span class="n">TransformMatchingTex</span><span class="p">(</span>
                 <span class="n">new_line2</span><span class="p">,</span> <span class="n">lines</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
-                <span class="n">transform_mismatches</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">transform_mismatches</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="p">),</span>
             <span class="o">**</span><span class="n">play_kw</span>
         <span class="p">)</span>
@@ -427,9 +426,9 @@ and <code class="docutils literal notranslate"><span class="pre">TransformMatchi
             <span class="n">Text</span><span class="p">(</span><span class="s2">"Width = "</span><span class="p">),</span>
             <span class="n">DecimalNumber</span><span class="p">(</span>
                 <span class="mi">0</span><span class="p">,</span>
-                <span class="n">show_ellipsis</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">show_ellipsis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                 <span class="n">num_decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-                <span class="n">include_sign</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">include_sign</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="p">)</span>
         <span class="n">label</span><span class="o">.</span><span class="n">arrange</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">)</span>
@@ -459,7 +458,7 @@ and <code class="docutils literal notranslate"><span class="pre">TransformMatchi
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span>
-            <span class="n">square</span><span class="o">.</span><span class="n">animate</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+            <span class="n">square</span><span class="o">.</span><span class="n">animate</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">stretch</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
             <span class="n">run_time</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
@@ -516,7 +515,7 @@ and <code class="docutils literal notranslate"><span class="pre">TransformMatchi
             <span class="c1"># Alternatively, you can specify configuration for just one</span>
             <span class="c1"># of them, like this.</span>
             <span class="n">y_axis_config</span><span class="o">=</span><span class="p">{</span>
-                <span class="s2">"include_tip"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                <span class="s2">"include_tip"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
             <span class="p">}</span>
         <span class="p">)</span>
         <span class="c1"># Keyword arguments of add_coordinate_labels can be used to</span>
@@ -594,7 +593,7 @@ and <code class="docutils literal notranslate"><span class="pre">TransformMatchi
         <span class="c1"># a corner, though, you can set use_smoothing to False</span>
         <span class="n">relu_graph</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span>
             <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-            <span class="n">use_smoothing</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+            <span class="n">use_smoothing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
             <span class="n">color</span><span class="o">=</span><span class="n">YELLOW</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="c1"># For discontinuous functions, you can specify the point of</span>
@@ -777,12 +776,12 @@ the related usage has been briefly described in the notes.</p>
         <span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
         <span class="n">linear_transform_words</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span>
             <span class="n">Text</span><span class="p">(</span><span class="s2">"This is what the matrix"</span><span class="p">),</span>
-            <span class="n">IntegerMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">include_background_rectangle</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+            <span class="n">IntegerMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">include_background_rectangle</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
             <span class="n">Text</span><span class="p">(</span><span class="s2">"looks like"</span><span class="p">)</span>
         <span class="p">)</span>
         <span class="n">linear_transform_words</span><span class="o">.</span><span class="n">arrange</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">)</span>
         <span class="n">linear_transform_words</span><span class="o">.</span><span class="n">to_edge</span><span class="p">(</span><span class="n">UP</span><span class="p">)</span>
-        <span class="n">linear_transform_words</span><span class="o">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLACK</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">linear_transform_words</span><span class="o">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLACK</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span>
             <span class="n">ShowCreation</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span>
@@ -799,11 +798,11 @@ the related usage has been briefly described in the notes.</p>
         <span class="n">c_grid</span><span class="o">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLUE_E</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="n">c_grid</span><span class="o">.</span><span class="n">add_coordinate_labels</span><span class="p">(</span><span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
         <span class="n">complex_map_words</span> <span class="o">=</span> <span class="n">TexText</span><span class="p">(</span><span class="s2">"""</span>
-<span class="s2">            Or thinking of the plane as $</span><span class="se">\\</span><span class="s2">mathds{C}$,</span><span class="se">\\\\</span><span class="s2"></span>
+<span class="s2">            Or thinking of the plane as $</span><span class="se">\\</span><span class="s2">mathds</span><span class="si">{C}</span><span class="s2">$,</span><span class="se">\\\\</span>
 <span class="s2">            this is the map $z </span><span class="se">\\</span><span class="s2">rightarrow z^2$</span>
 <span class="s2">        """</span><span class="p">)</span>
         <span class="n">complex_map_words</span><span class="o">.</span><span class="n">to_corner</span><span class="p">(</span><span class="n">UR</span><span class="p">)</span>
-        <span class="n">complex_map_words</span><span class="o">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLACK</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">complex_map_words</span><span class="o">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLACK</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span>
             <span class="n">FadeOut</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span>
@@ -829,12 +828,12 @@ usage of manim. For more examples, see <a class="reference external" href="https
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="config.html">
+          <a class="next-page" href="structure.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">CONFIG dictionary</div>
+                <div class="title">Manim’s structure</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
